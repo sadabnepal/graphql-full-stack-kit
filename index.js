@@ -28,6 +28,7 @@ async function startServer() {
             type Todo {
                 id: ID!
                 todo: String!
+                user: User
             }
 
             type Query {
@@ -37,6 +38,9 @@ async function startServer() {
             }
          `,
         resolvers: {
+            Todo: {
+                user: (todo) =>  USERS.find(data => data.id === todo.id)
+            },
             Query: {
                 getTodos: () => TODOS,
                 getAllUsers: () => USERS,
