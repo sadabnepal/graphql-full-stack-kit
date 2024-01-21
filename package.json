@@ -1,0 +1,24 @@
+{
+  "name": "graphql-test",
+  "version": "1.0.0",
+  "description": "graphql development and testing",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": ""
+  },
+  "keywords": [
+    "graphql",
+    "nodejs",
+    "supertest",
+    "typescript"
+  ],
+  "author": "MD SADAB SAQIB",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/server": "^4.10.0",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "graphql": "^16.8.1"
+  }
+}
