@@ -1,6 +1,9 @@
 ## GraphQL Code
 
-### start server
+### Start Server
 ```
-node index.js
+npm start
 ```
+
+### GraphQl Server
+![graphql](./sample/graphql.png)
