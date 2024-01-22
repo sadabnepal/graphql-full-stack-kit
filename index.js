@@ -39,12 +39,12 @@ async function startServer() {
          `,
         resolvers: {
             Todo: {
-                user: (todo) =>  USERS.find(data => data.id === todo.id)
+                user: (todo) => USERS.find(data => data.id === todo.id)
             },
             Query: {
                 getTodos: () => TODOS,
                 getAllUsers: () => USERS,
-                getUser: (parent, { id }) => USERS.find(data => data.id === id)
+                getUser: (parent, { id }) => USERS.find(data => data.id === Number(id))
             }
         }
     });
