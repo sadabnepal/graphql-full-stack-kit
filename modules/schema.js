@@ -18,9 +18,26 @@ type User {
     password: String!
 }
 
+type Burger {
+    id: ID!
+    name: String!
+    description: String!
+    price: Float!
+    calories: Float!
+    inStock: Boolean!
+    patty: String!
+    cheese: Boolean!
+    lettuce: Boolean!
+    tomato: Boolean!
+    onion: Boolean!
+    sauce: Boolean!
+}
+
 type Query {
-    getTodos: [Todo]
-    getAllUsers: [User]
-    getUser(id: ID!): User
+    todos: [Todo]
+    users: [User]
+    user(id: ID!): User
+    burgers: [Burger]
+    burger(name: String!): Burger
 }
 `
