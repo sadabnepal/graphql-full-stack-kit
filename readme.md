@@ -53,4 +53,29 @@ http://localhost:8000/graphql
         }
     }
 }
-``
+```
+
+### Sample Query:
+```
+query Burger($name: String!, $vegan: Boolean!) {
+  burger (name: $name) {
+    id
+    name
+    tomato
+    cheese @skip(if: $vegan)
+    inStock
+    price
+  }
+}
+
+
+variable
+
+{
+  "vegan": false,
+  "name": "Veggie Delight"
+}
+
+```
+
+

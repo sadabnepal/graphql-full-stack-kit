@@ -1,9 +1,4 @@
 export const schemaTypeDefinition = `
-type Todo {
-    id: ID!
-    todo: String!
-    user: User
-}
 
 type User {
     id: ID!
@@ -34,7 +29,6 @@ type Burger {
 }
 
 type Query {
-    todos: [Todo]
     users: [User]
     user(id: ID!): User
     burgers: [Burger]
