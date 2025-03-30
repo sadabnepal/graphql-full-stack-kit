@@ -25,36 +25,6 @@ http://localhost:8000/graphql
 ### GraphQl Server
 ![graphql](./sample/graphql.png)
 
-
-### TODO:
-- Implement Burger concept in graphql query and mutation
-- Refer https://hygraph.com/blog/graphql-vs-rest-apis 
-
-```
-{
-  burgers(where: { name: "cheeseburger"})
-        name 
-        description 
-        price 
-        calories   
-        inStock 
-}
-```
-
-```
-{
-    query getCheeseburger ($vegan: Boolean) {
-        cheeseburger {
-            bun
-            patty
-            pickle
-            onion
-            cheese @skip(if: $vegan)
-        }
-    }
-}
-```
-
 ### Sample Query:
 ```
 query Burger($name: String!, $vegan: Boolean!) {
@@ -79,3 +49,17 @@ variable
 ```
 
 
+### TODO:
+- Implement Burger concept in graphql query and mutation
+- Refer https://hygraph.com/blog/graphql-vs-rest-apis 
+
+```
+{
+  burgers(where: { name: "cheeseburger"})
+        name 
+        description 
+        price 
+        calories   
+        inStock 
+}
+```
