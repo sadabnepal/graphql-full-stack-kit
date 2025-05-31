@@ -1,11 +1,14 @@
 ## GraphQL Code
 
-Clone Repository
+### Clone Repository
 
 ```bash
 git clone https://github.com/sadabnepal/graphql-dev-test.git
 cd graphql-dev-test
 ```
+
+### Pre-requisite
+[![NodeJs](https://img.shields.io/badge/-NodeJS-808080?logo=Node.JS)](https://nodejs.org/en/download/)
 
 ### Install Packages
 ```
