@@ -24,12 +24,25 @@ type Burger {
     tomato: Boolean!
     onion: Boolean!
     sauce: Boolean!
+    vegan: Boolean!
+}
+
+input BurgerFilterInput {
+    name: String
+    vegan: Boolean
+    inStock: Boolean
+    patty: String
+    cheese: Boolean
+    lettuce: Boolean
+    tomato: Boolean
+    onion: Boolean
+    sauce: Boolean
 }
 
 type Query {
     users: [User]
     user(id: ID!): User
-    burgers: [Burger]
-    burger(name: String!): Burger
+    burgers(where: BurgerFilterInput): [Burger]
+    burger(id: ID!): Burger
 }
 `

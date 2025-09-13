@@ -51,18 +51,21 @@ variable
 
 ```
 
+```
+query {
+  burgers(where: {vegan: true, inStock: true}) {
+    calories
+    vegan
+    cheese
+    description
+    name
+  }
+}
+```
+
 
 ### TODO:
 - Implement Burger concept in graphql query and mutation
 - Refer https://hygraph.com/blog/graphql-vs-rest-apis 
 
-```
-{
-  burgers(where: { name: "cheeseburger"})
-        name 
-        description 
-        price 
-        calories   
-        inStock 
-}
-```
+![burger](./sample/burger.png)
