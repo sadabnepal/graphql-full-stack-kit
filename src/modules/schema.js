@@ -1,6 +1,4 @@
-export const schemaTypeDefinition = `
-
-type User {
+export const schema = `type User {
     id: ID!
     firstName: String!
     lastName: String!
