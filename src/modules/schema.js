@@ -43,6 +43,6 @@ type Query {
     users: [User]
     user(id: ID!): User
     burgers(where: BurgerFilterInput): [Burger]
-    burger(id: ID!): Burger
+    burger(name: String!): Burger
 }
 `

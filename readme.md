@@ -66,6 +66,7 @@ query {
 
 ### TODO:
 - Implement Burger concept in graphql query and mutation
+- Open Source GraphQL playground https://apis.guru/graphql-apis
 - Refer https://hygraph.com/blog/graphql-vs-rest-apis 
 
 ![burger](./sample/burger.png)
