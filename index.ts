@@ -4,13 +4,13 @@ import { expressMiddleware } from "@apollo/server/express4"
 import bodyParser from 'body-parser';
 import cors from 'cors';
 
-import { schema } from './src/modules/schema.js';
-import { dataResolvers } from './src/modules/resolvers.js';
+import { typeDefs } from './src/modules/schema';
+import { dataResolvers } from './src/modules/resolvers';
 
 async function startServer() {
     const app = express();
     const server = new ApolloServer({
-        typeDefs: schema,
+        typeDefs: typeDefs,
         resolvers: dataResolvers
     });
 

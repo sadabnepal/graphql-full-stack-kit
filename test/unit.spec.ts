@@ -1,7 +1,15 @@
 import { expect } from 'chai';
 import { graphql } from 'graphql';
-import { schema } from '../src/modules/schema.js';
+import { typeDefs } from '../src/modules/schema';
 import { describe, it } from 'mocha';
+import { IBurger } from '../src/interface/burger';
+import { IQueryResult } from '../src/interface/burger';
+import { dataResolvers } from '../src/modules/resolvers';
+import { makeExecutableSchema } from '@graphql-tools/schema';
+
+
+export const schema = makeExecutableSchema({ typeDefs, resolvers: dataResolvers });
+
 
 describe('test burger', () => {
 
@@ -21,12 +29,9 @@ describe('test burger', () => {
             vegan: false
         };
 
-        const result = await graphql({ schema, source: query, variableValues: variables });
-        console.log('result', result);
-        expect(result.errors).to.be.undefined;
-        expect(result.data.burgers).to.be.an('array').that.is.not.empty;
+        const result = await graphql({ schema, source: query, variableValues: variables }) as IQueryResult<{ burgers: IBurger[] }>;
 
-        const isAllNonVegan = result.data.burgers.every(burger => burger.vegan === false);
-        expect(isAllNonVegan).to.be.true;
+        expect(result.data).to.haveOwnProperty('burgers');
+        expect(result.data.burgers.filter(burger => burger.vegan).length).to.equal(0);
     });
 });

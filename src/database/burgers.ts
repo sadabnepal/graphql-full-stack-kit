@@ -1,4 +1,6 @@
-export const BURGERS = [
+import { IBurger } from '../interface/burger';
+
+export const BURGERS: IBurger[] = [
     {
         id: 1,
         name: 'Classic Burger',
@@ -288,7 +290,7 @@ export const BURGERS = [
         id: 20,
         name: 'Pineapple Burger',
         patty: 'Veggie',
-        cheese: true,
+        cheese: false,
         lettuce: false,
         tomato: true,
         onion: true,
