@@ -3,8 +3,8 @@
 ### Clone Repository
 
 ```bash
-git clone https://github.com/sadabnepal/graphql-dev-test.git
-cd graphql-dev-test
+git clone https://github.com/sadabnepal/graphql-full-stack-kit.git
+cd graphql-full-stack-kit
 ```
 
 ### Pre-requisite
