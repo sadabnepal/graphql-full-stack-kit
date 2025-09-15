@@ -1,4 +1,6 @@
-export const BURGERS = [
+import { IBurger } from '../interface/burger';
+
+export const BURGERS: IBurger[] = [
     {
         id: 1,
         name: 'Classic Burger',
@@ -11,7 +13,8 @@ export const BURGERS = [
         price: 5.99,
         calories: 450,
         inStock: true,
-        description: 'A classic beef burger with cheese, lettuce, tomato, and a tangy sauce.'
+        description: 'A classic beef burger with cheese, lettuce, tomato, and a tangy sauce.',
+        vegan: false
     },
     {
         id: 2,
@@ -25,7 +28,8 @@ export const BURGERS = [
         price: 4.99,
         calories: 350,
         inStock: true,
-        description: 'A light and fresh veggie burger with lettuce and tomato.'
+        description: 'A light and fresh veggie burger with lettuce and tomato.',
+        vegan: true
     },
     {
         id: 3,
@@ -39,7 +43,8 @@ export const BURGERS = [
         price: 6.49,
         calories: 500,
         inStock: true,
-        description: 'A juicy chicken patty topped with melted cheese, tomato, onion, and a spicy sauce.'
+        description: 'A juicy chicken patty topped with melted cheese, tomato, onion, and a spicy sauce.',
+        vegan: false
     },
     {
         id: 4,
@@ -53,7 +58,8 @@ export const BURGERS = [
         price: 7.99,
         calories: 700,
         inStock: false,
-        description: 'A hearty beef patty with cheese, crispy bacon, and all the classic toppings.'
+        description: 'A hearty beef patty with cheese, crispy bacon, and all the classic toppings.',
+        vegan: false
     },
     {
         id: 5,
@@ -67,7 +73,8 @@ export const BURGERS = [
         price: 6.99,
         calories: 550,
         inStock: true,
-        description: 'Grilled chicken with BBQ sauce, melted cheese, and fresh tomato.'
+        description: 'Grilled chicken with BBQ sauce, melted cheese, and fresh tomato.',
+        vegan: false
     },
     {
         id: 6,
@@ -81,7 +88,8 @@ export const BURGERS = [
         price: 6.49,
         calories: 650,
         inStock: true,
-        description: 'A savory beef patty with melted cheese, sautéed mushrooms, and caramelized onions.'
+        description: 'A savory beef patty with melted cheese, sautéed mushrooms, and caramelized onions.',
+        vegan: false
     },
     {
         id: 7,
@@ -95,13 +103,14 @@ export const BURGERS = [
         price: 7.49,
         calories: 600,
         inStock: true,
-        description: 'A spicy beef patty with cheese, lettuce, tomato, and a special hot sauce.'
+        description: 'A spicy beef patty with cheese, lettuce, tomato, and a special hot sauce.',
+        vegan: false
     },
     {
         id: 8,
         name: 'Deluxe Veggie',
         patty: 'Veggie',
-        cheese: true,
+        cheese: false,
         lettuce: true,
         tomato: true,
         onion: true,
@@ -109,7 +118,8 @@ export const BURGERS = [
         price: 5.99,
         calories: 400,
         inStock: true,
-        description: 'A delicious veggie patty with all the fresh toppings and a creamy sauce.'
+        description: 'A delicious veggie patty with all the fresh toppings and a creamy sauce.',
+        vegan: true
     },
     {
         id: 9,
@@ -123,7 +133,8 @@ export const BURGERS = [
         price: 6.29,
         calories: 480,
         inStock: true,
-        description: 'A grilled chicken patty with cheese, onions, and a tangy sauce.'
+        description: 'A grilled chicken patty with cheese, onions, and a tangy sauce.',
+        vegan: false
     },
     {
         id: 10,
@@ -137,7 +148,8 @@ export const BURGERS = [
         price: 6.89,
         calories: 550,
         inStock: true,
-        description: 'A Texas-style beef burger with cheese, lettuce, onions, and a smoky flavor.'
+        description: 'A Texas-style beef burger with cheese, lettuce, onions, and a smoky flavor.',
+        vegan: false
     },
     {
         id: 11,
@@ -151,7 +163,8 @@ export const BURGERS = [
         price: 7.99,
         calories: 750,
         inStock: false,
-        description: 'A double stack of beef patties with double cheese and all the fixings.'
+        description: 'A double stack of beef patties with double cheese and all the fixings.',
+        vegan: false
     },
     {
         id: 12,
@@ -165,7 +178,8 @@ export const BURGERS = [
         price: 5.49,
         calories: 400,
         inStock: true,
-        description: 'A crispy fish patty with lettuce, onions, and a tangy sauce.'
+        description: 'A crispy fish patty with lettuce, onions, and a tangy sauce.',
+        vegan: false
     },
     {
         id: 13,
@@ -179,7 +193,8 @@ export const BURGERS = [
         price: 5.99,
         calories: 420,
         inStock: true,
-        description: 'Grilled chicken with fresh lettuce, tomato, and no sauce for a healthy bite.'
+        description: 'Grilled chicken with fresh lettuce, tomato, and no sauce for a healthy bite.',
+        vegan: false
     },
     {
         id: 14,
@@ -193,7 +208,8 @@ export const BURGERS = [
         price: 6.79,
         calories: 650,
         inStock: true,
-        description: 'A beef patty with cheese, lettuce, tomato, and a southwestern spicy sauce.'
+        description: 'A beef patty with cheese, lettuce, tomato, and a southwestern spicy sauce.',
+        vegan: false
     },
     {
         id: 15,
@@ -207,7 +223,8 @@ export const BURGERS = [
         price: 5.29,
         calories: 350,
         inStock: true,
-        description: 'A fresh veggie patty with lettuce, tomato, onion, and no sauce.'
+        description: 'A fresh veggie patty with lettuce, tomato, onion, and no sauce.',
+        vegan: true
     },
     {
         id: 16,
@@ -221,7 +238,8 @@ export const BURGERS = [
         price: 7.49,
         calories: 700,
         inStock: true,
-        description: 'A beef patty with BBQ sauce, cheese, onions, and a fresh tomato.'
+        description: 'A beef patty with BBQ sauce, cheese, onions, and a fresh tomato.',
+        vegan: false
     },
     {
         id: 17,
@@ -235,7 +253,8 @@ export const BURGERS = [
         price: 7.99,
         calories: 750,
         inStock: false,
-        description: 'A delicious chicken patty with bacon, cheese, lettuce, tomato, and onion.'
+        description: 'A delicious chicken patty with bacon, cheese, lettuce, tomato, and onion.',
+        vegan: false
     },
     {
         id: 18,
@@ -249,7 +268,8 @@ export const BURGERS = [
         price: 8.49,
         calories: 800,
         inStock: true,
-        description: 'The ultimate burger with all the toppings and a juicy beef patty.'
+        description: 'The ultimate burger with all the toppings and a juicy beef patty.',
+        vegan: false
     },
     {
         id: 19,
@@ -263,13 +283,14 @@ export const BURGERS = [
         price: 5.99,
         calories: 420,
         inStock: true,
-        description: 'A crispy chicken patty with onions, lettuce, and tangy sauce.'
+        description: 'A crispy chicken patty with onions, lettuce, and tangy sauce.',
+        vegan: false
     },
     {
         id: 20,
         name: 'Pineapple Burger',
-        patty: 'Beef',
-        cheese: true,
+        patty: 'Veggie',
+        cheese: false,
         lettuce: false,
         tomato: true,
         onion: true,
@@ -277,6 +298,7 @@ export const BURGERS = [
         price: 7.29,
         calories: 600,
         inStock: true,
-        description: 'A beef patty with pineapple, cheese, onions, and a savory sauce.'
+        description: 'A veggie patty with pineapple, cheese, onions, and a savory sauce.',
+        vegan: true
     }
 ];

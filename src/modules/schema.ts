@@ -1,6 +1,4 @@
-export const schemaTypeDefinition = `
-
-type User {
+export const typeDefs = `type User {
     id: ID!
     firstName: String!
     lastName: String!
@@ -26,12 +24,25 @@ type Burger {
     tomato: Boolean!
     onion: Boolean!
     sauce: Boolean!
+    vegan: Boolean!
+}
+
+input BurgerFilterInput {
+    name: String
+    vegan: Boolean
+    inStock: Boolean
+    patty: String
+    cheese: Boolean
+    lettuce: Boolean
+    tomato: Boolean
+    onion: Boolean
+    sauce: Boolean
 }
 
 type Query {
     users: [User]
     user(id: ID!): User
-    burgers: [Burger]
+    burgers(where: BurgerFilterInput): [Burger]
     burger(name: String!): Burger
 }
 `

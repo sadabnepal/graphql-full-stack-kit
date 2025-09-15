@@ -4,13 +4,13 @@ import { expressMiddleware } from "@apollo/server/express4"
 import bodyParser from 'body-parser';
 import cors from 'cors';
 
-import { schemaTypeDefinition } from './src/modules/schema.js';
-import { dataResolvers } from './src/modules/resolvers.js';
+import { typeDefs } from './src/modules/schema';
+import { dataResolvers } from './src/modules/resolvers';
 
 async function startServer() {
     const app = express();
     const server = new ApolloServer({
-        typeDefs: schemaTypeDefinition,
+        typeDefs: typeDefs,
         resolvers: dataResolvers
     });
 
@@ -21,7 +21,7 @@ async function startServer() {
 
     app.use("/graphql", expressMiddleware(server));
 
-    app.listen(8000, () => console.log("Server started at port 8000"));
+    app.listen(8000, () => console.log('GraphQL server started at port http://localhost:8000/graphql'));
 }
 
 startServer();
