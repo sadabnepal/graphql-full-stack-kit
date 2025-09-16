@@ -1,7 +1,9 @@
+type PattyType = 'Beef' | 'Chicken' | 'Fish' | 'Veggie' | 'Vegan';
+
 export interface IBurger {
     id: number;
     name: string;
-    patty: 'Beef' | 'Chicken' | 'Fish' | 'Veggie' | 'Vegan';
+    patty: PattyType;
     cheese: boolean;
     lettuce: boolean;
     tomato: boolean;
@@ -20,7 +22,7 @@ export interface IBurgerInput {
         name?: string;
         vegan?: boolean;
         inStock?: boolean;
-        patty?: string;
+        patty?: PattyType;
         cheese?: boolean;
         lettuce?: boolean;
         tomato?: boolean;

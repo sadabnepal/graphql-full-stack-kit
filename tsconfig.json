@@ -6,6 +6,21 @@
             "node",
             "mocha"
         ],
+        "baseUrl": ".",
+        "paths": {
+            "@database/*": [
+                "src/database/*"
+            ],
+            "@interface/*": [
+                "src/interface/*"
+            ],
+            "@modules/*": [
+                "src/modules/*"
+            ],
+            "@utils/*": [
+                "src/utils/*"
+            ]
+        },
         "noUncheckedIndexedAccess": true,
         "exactOptionalPropertyTypes": true,
         "strict": true,
@@ -13,6 +28,10 @@
     },
     "include": [
         "src",
+        "test",
         "index.ts"
+    ],
+    "exclude": [
+        "node_modules"
     ]
 }

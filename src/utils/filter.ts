@@ -1,4 +1,4 @@
-import { IBurger, IBurgerInput } from "../interface/burger";
+import { IBurger, IBurgerInput } from "@interface/burger";
 
 export const fetchBurgers = (burgers: IBurger[], args: IBurgerInput) => {
     if (!args.where) return burgers;
