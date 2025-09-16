@@ -1,14 +1,7 @@
-export const typeDefs = `type User {
-    id: ID!
-    firstName: String!
-    lastName: String!
-    maidenName: String!
-    age: String!
-    gender: String!
-    email: String!
-    phone: String!
-    username: String!
-    password: String!
+export const typeDefs = `#graphql
+type Query {
+    burgers(where: BurgerFilterInput): [Burger]
+    burger(name: String!): Burger
 }
 
 type Burger {
@@ -18,7 +11,7 @@ type Burger {
     price: Float!
     calories: Float!
     inStock: Boolean!
-    patty: String!
+    patty: PattyType!
     cheese: Boolean!
     lettuce: Boolean!
     tomato: Boolean!
@@ -31,7 +24,7 @@ input BurgerFilterInput {
     name: String
     vegan: Boolean
     inStock: Boolean
-    patty: String
+    patty: PattyType
     cheese: Boolean
     lettuce: Boolean
     tomato: Boolean
@@ -39,10 +32,11 @@ input BurgerFilterInput {
     sauce: Boolean
 }
 
-type Query {
-    users: [User]
-    user(id: ID!): User
-    burgers(where: BurgerFilterInput): [Burger]
-    burger(name: String!): Burger
+enum PattyType {
+    Beef
+    Chicken
+    Fish
+    Veggie
+    Vegan
 }
-`
+`;

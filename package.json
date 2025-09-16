@@ -4,11 +4,10 @@
   "description": "graphql development and testing",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "start:ts": "ts-node index.ts",
+    "start": "ts-node -r tsconfig-paths/register index.ts",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "test": "mocha './test/**/*.spec.ts' --require ts-node/register"
+    "test": "mocha './test/**/*.spec.ts' -r ts-node/register -r tsconfig-paths/register"
   },
   "keywords": [
     "graphql",
@@ -36,6 +35,7 @@
     "jiti": "^2.5.1",
     "mocha": "^11.7.2",
     "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "^5.9.2",
     "typescript-eslint": "^8.43.0"
   }

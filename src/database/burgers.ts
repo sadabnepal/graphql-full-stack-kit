@@ -1,4 +1,4 @@
-import { IBurger } from '../interface/burger';
+import { IBurger } from '@interface/burger';
 
 export const BURGERS: IBurger[] = [
     {
