@@ -65,7 +65,7 @@ query {
 
 
 ### TODO:
-- Implement Burger concept in graphql query and mutation
+- Implement auth in mutation and implement same response format
 - Open Source GraphQL playground https://apis.guru/graphql-apis
 - Refer https://hygraph.com/blog/graphql-vs-rest-apis 
 
