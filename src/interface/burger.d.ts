@@ -1,3 +1,9 @@
+export interface IQueryResult<T> {
+    data: T,
+    errors: unknown[]
+};
+
+
 type PattyType = 'Beef' | 'Chicken' | 'Fish' | 'Veggie' | 'Vegan';
 
 export interface IBurger {
@@ -17,7 +23,7 @@ export interface IBurger {
 };
 
 
-export interface IBurgerInput {
+export interface IBurgerFilterInput {
     where?: {
         name?: string;
         vegan?: boolean;
@@ -31,7 +37,37 @@ export interface IBurgerInput {
     }
 };
 
-export interface IQueryResult<T> {
-    data: T,
-    errors: unknown[]
-};
+export interface IBurgerCreateInput {
+    data: {
+        name: string;
+        description: string;
+        price: number;
+        calories: number;
+        inStock: boolean;
+        patty: PattyType;
+        cheese: boolean;
+        lettuce: boolean;
+        tomato: boolean;
+        onion: boolean;
+        sauce: boolean;
+        vegan: boolean
+    };
+}
+
+export interface IBurgerCreateResponse {
+    data: IBurger;
+    message: string;
+}
+
+
+export interface IBurgerDeleteInput {
+    id: string;
+}
+
+export interface IBurgerDeleteResponse {
+    success: boolean;
+    message: {
+        id: string;
+        result: string;
+    };
+}
