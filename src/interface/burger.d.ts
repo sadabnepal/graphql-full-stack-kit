@@ -55,10 +55,12 @@ export interface IBurgerCreateInput {
 }
 
 export interface IBurgerCreateResponse {
-    data: IBurger;
-    message: string;
+    success: boolean;
+    message: {
+        result: string;
+        data: IBurger
+    };
 }
-
 
 export interface IBurgerDeleteInput {
     id: string;
@@ -67,7 +69,6 @@ export interface IBurgerDeleteInput {
 export interface IBurgerDeleteResponse {
     success: boolean;
     message: {
-        id: string;
         result: string;
     };
 }

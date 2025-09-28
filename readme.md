@@ -66,6 +66,7 @@ query {
 
 ### TODO:
 - Implement auth in mutation and implement same response format
+- Enhance unit tests, query and mutation data to be reusable
 - Open Source GraphQL playground https://apis.guru/graphql-apis
 - Refer https://hygraph.com/blog/graphql-vs-rest-apis 
 

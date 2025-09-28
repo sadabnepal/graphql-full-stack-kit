@@ -26,33 +26,46 @@ export const fetchBurgers = (burgers: IBurger[], args: IBurgerFilterInput) => {
 
 
 export const createBurger = (args: IBurgerCreateInput): IBurgerCreateResponse => {
+    const matchingBurger = BURGERS.find(burger => burger.name === args.data.name);
+
+    if (matchingBurger) {
+        return {
+            success: false,
+            message: {
+                result: "Burger with this ID already exists",
+                data: matchingBurger
+            }
+        }
+    };
+
     const existingIds = BURGERS.map(burger => burger.id);
     const newId = Math.max(...existingIds) + 1;
 
     const updatedArgs = {
-        message: "Burger created successfully",
-        data: {
-            id: newId,
-            ...args.data
+        success: true,
+        message: {
+            result: "Burger created successfully",
+            data: {
+                id: newId,
+                ...args.data
+            }
         }
     };
 
-    BURGERS.push(updatedArgs.data);
+    BURGERS.push(updatedArgs.message.data);
     return updatedArgs;
 }
 
 
 export const deleteBurgerById = (args: IBurgerDeleteInput): IBurgerDeleteResponse => {
-    console.log('typeof args.id', typeof args.id);
-    console.log('value args.id', Number(args.id));
+
     const matchingBurger = BURGERS.find(burger => burger.id === Number(args.id));
 
     if (!matchingBurger) {
         return {
             success: false,
             message: {
-                id: args.id,
-                result: "Burger not found"
+                result: `Burger with id: ${args.id} not found`,
             }
         }
     }
@@ -62,8 +75,7 @@ export const deleteBurgerById = (args: IBurgerDeleteInput): IBurgerDeleteRespons
     return {
         success: true,
         message: {
-            id: args.id,
-            result: "Burger deleted successfully"
+            result: "Burger deleted successfully",
         }
     };
 }
