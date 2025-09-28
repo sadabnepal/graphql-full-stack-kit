@@ -54,9 +54,15 @@ input BurgerCreateInput {
 
 
 type BurgerCreateResponse {
-    data: Burger!
-    message: String!
+    success: Boolean!
+    message: BurgerCreateMessage!
 }
+
+type BurgerCreateMessage {
+    result: String!
+    data: Burger!
+}
+
 
 input BurgerDeleteInput {
     id: ID!
@@ -68,7 +74,6 @@ type BurgerDeleteResponse {
 }
 
 type BurgerDeleteMessage {
-    id: ID!
     result: String!
 }
 
